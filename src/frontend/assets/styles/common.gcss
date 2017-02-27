@@ -1,0 +1,99 @@
+@import "vars.gcss";
+@import "normilize.gcss";
+
+html {
+  background-color: var(--c_bg);
+  color: var(--c_txt);
+
+  font-family: sans-serif;
+  font-weight: var(--f_light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--f_bold);
+  margin-bottom: 1rem;
+}
+
+.txt {
+  & p {
+    margin-bottom: calc(20rem / 16);
+  }
+
+  & a {
+    color: var(--c_txt);
+
+    &:visited {
+      color: var(--c_link_vis);
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: var(--c_sub);
+    }
+  }
+}
+
+th {
+  background-color: var(--c_thead);
+  line-height: calc(53rem / 16);
+  font-weight: var(--f_bold);
+  text-transform: capitalize;
+  padding: 0 calc(20rem / 16);
+}
+
+tbody {
+  color: var(--c_sub);
+  border-left: 1px solid var(--c_thead);
+  border-right: 1px solid var(--c_thead);
+}
+
+td {
+  padding: calc(10rem/16) calc(20rem / 16);
+}
+
+tr {
+  border-bottom: 1px solid var(--c_thead);
+}
+
+blockquote {
+  border-left: 2px solid var(--c_txt);
+  padding-left: 15px;
+}
+
+q {
+  display: inline;
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.is-emph {
+  color: var(--c_emph);
+}
+
+.app_wrap {
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: stretch;
+}

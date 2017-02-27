@@ -1,0 +1,27 @@
+@import "../../assets/styles/vars.gcss";
+
+:root {
+  --nav: {
+    margin-bottom: calc(30rem / var(--f_size));
+    font-size: 1rem;
+
+    & a {
+      margin-right: 20px;
+      color: var(--c_link);
+      text-decoration: none;
+    }
+
+    & a:hover {
+      color: var(--c_link_vis);
+    }
+  }
+}
+
+.nav {
+  @apply --nav;
+  text-align: right;
+}
+
+:global(.nav) {
+  @apply --nav;
+}

@@ -1,0 +1,21 @@
+:root {
+  /* COLORS */
+  --c_bg: #222;
+  --c_txt: #fff;
+  --c_link: #a2a2a2;
+  --c_link_vis: #a1a1a1;
+  --c_emph: #5fffee;
+  --c_thead: #0e0e0e;
+  --c_sub: #f7f7f7;
+
+  /*  TYPOGRAPHY */
+  --f_size: 16;
+  --f_light: 300;
+  --f_regular: 400;
+  --f_medium: 500;
+  --f_semi_bold: 600;
+  --f_bold: 700;
+
+  /* GRID */
+  --w_max: 1600;
+}

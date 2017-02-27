@@ -1,0 +1,9 @@
+/* Example of usage mixins in css */
+
+/*@define-mixin rem_calc $val {*/
+  /*margin-left: calc($val*1rem/(var(--f_size)))*/
+/*}*/
+
+/*.class-name_example {*/
+  /*@mixin rem_calc 30;*/
+/*}*/

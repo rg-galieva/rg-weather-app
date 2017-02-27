@@ -1,0 +1,173 @@
+/*
+ * General
+ * Headings: h1-h6
+ * Text elements: Paragraph, Link
+ * Image
+ * Lists
+ * Table
+ * Blockquote
+ * Forms
+ */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 1em;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: calc(24rem / 16);
+  font-size: calc(12rem / 16);
+  font-family: sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: calc(63rem / 16);
+  line-height: calc(58rem / 16);
+}
+
+h2 {
+  font-size: calc(48rem / 16);
+  line-height: calc(48rem / 16);
+}
+
+h3 {
+  font-size: calc(36rem / 16);
+  line-height: calc(36rem / 16);
+}
+
+h4 {
+  font-size: calc(30rem / 16);
+  line-height: calc(36rem / 16);
+}
+
+h5 {
+  font-size: calc(20rem / 16);
+  line-height: calc(24rem / 16);
+}
+
+h6 {
+  font-size: calc(12rem / 16);
+  line-height: calc(14rem / 16);
+}
+
+p {
+  font-size: calc(12rem / 16);
+  line-height: calc(24rem / 16);
+}
+
+a {
+  cursor: pointer;
+  transition: .3s;
+}
+
+strong {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+ol, ul {
+  margin-left: 45px;
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol li, ul li {
+  line-height: calc(32rem / 16);
+
+  & ol {
+    margin: calc(30rem / 16) 0 calc(30rem / 16) calc(30rem / 16)
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+blockquote {
+  display: block;
+  font-style: italic;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+/* Add the correct display in iOS 4-7 */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* Hide the overflow in IE */
+svg:not(:root) {
+  overflow: hidden;
+}

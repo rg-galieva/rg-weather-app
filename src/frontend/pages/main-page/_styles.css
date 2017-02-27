@@ -1,0 +1,68 @@
+@import "../../assets/styles/vars.gcss";
+
+:global(html) {
+  background-color: var(--c_bg);
+  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700');
+}
+
+.wrap {
+  max-width: 1600px;
+  margin: calc(20rem/var(--f_size)) auto;
+  padding: 0 calc(100%/var(--f_size));
+  min-height: calc(100% - 40rem/var(--f_size));
+
+  display: flex;
+  flex-direction: column;
+
+  & > header {
+    position: relative;
+    margin-bottom: calc(50rem / var(--f_size));
+  }
+
+  & > main {
+    flex: 1 0 auto;
+  }
+
+  & > footer {
+    flex: 0 0 auto;
+
+    & a {
+      margin-right: 20px;
+      color: var(--c_link);
+      text-decoration: none;
+    }
+
+    & a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.logo {
+  @import url('https://fonts.googleapis.com/css?family=Voltaire');
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(54rem/var(--f_size)); height: calc(54rem/var(--f_size));
+  padding: calc(7rem/var(--f_size)) 0 0 calc(8rem/var(--f_size));
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  font-family: 'Voltaire', sans-serif;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  color: var(--c_txt);
+  font-size: calc(26rem / var(--f_size));
+  text-decoration: none;
+
+  &:hover {
+    border-color: var(--c_emph);
+  }
+
+  & mark {
+    display: block;
+    font-size: calc(18rem / var(--f_size));
+    background: none;
+    color: var(--c_txt);
+    white-space: nowrap;
+  }
+}
