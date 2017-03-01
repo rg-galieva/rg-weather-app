@@ -82,10 +82,13 @@ module.exports = function () {
                     })
                 },
                 {
-                    test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                    test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
                     use: 'file-loader?name=img/[name]_[hash:5].[ext]'
-                }
-                ,
+                },
+                {
+                    test: /\.svg$/,
+                    use: 'raw-loader'
+                },
                 {
                     test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
                     use: 'url-loader?limit=100000'

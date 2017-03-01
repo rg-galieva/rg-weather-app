@@ -14,7 +14,8 @@ module.exports = function (env) {
             historyApiFallback: true,
             compress: true,
             port: 5050,
-            noInfo: true
+            noInfo: true,
+            headers: { "Access-Control-Allow-Origin": "*"}
         }
     })
 }

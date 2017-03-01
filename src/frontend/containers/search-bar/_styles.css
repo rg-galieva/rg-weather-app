@@ -1,0 +1,25 @@
+@import "../../assets/styles/vars.gcss";
+
+.search_form {
+  width: 60%;
+  margin: 0 auto;
+
+  & input {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--c_sub);
+    line-height: 2rem;
+    padding: 0 .5rem;
+    margin-bottom: 1rem;
+    background: #f7f7f7;
+
+
+    &::placeholder {
+      text-transform: uppercase;
+    }
+  }
+
+  & button {
+
+  }
+}

@@ -8,6 +8,9 @@
   --c_thead: #0e0e0e;
   --c_sub: #f7f7f7;
 
+  --c_like: #fe536d;
+  --c_main: #3c69de;
+
   /*  TYPOGRAPHY */
   --f_size: 16;
   --f_light: 300;

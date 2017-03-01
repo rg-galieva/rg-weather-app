@@ -1,8 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router'
 import Menu from '../../components/menu'
 require ('../../assets/styles/common.gcss')
 import s from './_styles.css'
-import {Link} from 'react-router'
+
+import SearchBarContainer from '../../containers/search-bar'
+import WeatherList from '../../containers/weather_list'
+
+
 
 function MainPage (props) {
     return (
@@ -13,6 +18,8 @@ function MainPage (props) {
             </header>
 
             <main>
+                <SearchBarContainer/>
+                <WeatherList/>
                 {props.children}
             </main>
 
