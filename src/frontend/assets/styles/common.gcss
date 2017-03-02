@@ -1,5 +1,7 @@
 @import "vars.gcss";
 @import "normilize.gcss";
+@import "button.gcss";
+@import "form.gcss";
 
 html {
   background-color: var(--c_bg);

@@ -45,8 +45,6 @@
   top: 0;
   width: calc(54rem/var(--f_size)); height: calc(54rem/var(--f_size));
   padding: calc(7rem/var(--f_size)) 0 0 calc(8rem/var(--f_size));
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
   font-family: 'Voltaire', sans-serif;
   text-transform: uppercase;
   margin-right: 2rem;
@@ -54,8 +52,38 @@
   font-size: calc(26rem / var(--f_size));
   text-decoration: none;
 
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: var(--c_txt);
+  }
+
+  &::before {
+    height: 2px;
+    width: calc(54rem/var(--f_size));
+    transition: width .3s, background-color .13s linear .25s;
+  }
+
+  &::after {
+    width: 2px;
+    height: calc(54rem/var(--f_size));
+    transition: all .2s;
+    transition-delay: .25s;
+  }
+
   &:hover {
-    border-color: var(--c_emph);
+    &::before {
+      background: var(--c_emph);
+      width: calc(34rem/var(--f_size));
+    }
+
+    &::after {
+      background: var(--c_emph);
+      /*height: calc(34rem/var(--f_size));*/
+    }
   }
 
   & mark {

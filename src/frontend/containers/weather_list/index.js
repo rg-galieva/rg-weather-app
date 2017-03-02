@@ -1,6 +1,9 @@
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
+import s from './_styles.css'
 import City from '../../components/city'
+
+const i_cancel = require('./cancel-1.svg');
 
 class WeatherList extends Component {
 
@@ -23,14 +26,19 @@ class WeatherList extends Component {
     getCityWeather = () => {
         return this.props.weather.map((w) => {
             let id = Math.random();
-            return <City key={id} id={id} weather={this.parseData(w)}/>
+            return (
+                <div className={s.city} key={id} >
+                    <div dangerouslySetInnerHTML={{__html: i_cancel}} className={s.delete}></div>
+                    <City id={id} weather={this.parseData(w)}/>
+                </div>
+            )
         })
     };
 
 
     render() {
         return (
-            <div>
+            <div className={s.city_list}>
                 {this.getCityWeather()}
             </div>
         )

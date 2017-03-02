@@ -30,7 +30,7 @@ body {
   box-sizing: border-box;
 }
 
-*:before, *:after {
+*::before, *:after {
   box-sizing: border-box;
 }
 
@@ -91,6 +91,11 @@ p {
 a {
   cursor: pointer;
   transition: .3s;
+  outline: none;
+
+  &:hover, &:focus {
+    outline: none;
+  }
 }
 
 strong {

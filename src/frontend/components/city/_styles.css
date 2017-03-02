@@ -4,20 +4,31 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  margin-right: 10px;
   text-transform: uppercase;
 }
 
 .city_wrap {
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
   font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 0 65px color(#3c6cde alpha(25%));
+  box-shadow: 0 0 5rem color(var(--c_main) alpha(25%));
 
   position: relative;
   border-radius: 6px;
   overflow: hidden;
-  font-size: 14px;
+  font-size: calc(14rem/var(--f_size));
   background-repeat: no-repeat;
+}
+
+.city {
+  color: #fff;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px color(#3e6edf alpha(60%));
+
+  & :global(h1) {
+    line-height: 190px;
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
 .desc {
@@ -31,19 +42,7 @@
   transition: all 0.2s ease-in;
 }
 
-.city {
-  width: 270px;
-  height: 190px;
-  color: #fff;
-  background-size: cover;
-  box-shadow: inset 0 0 0 2000px color(#3e6edf alpha(60%));
 
-  & :global(h1) {
-    line-height: 190px;
-    font-size: 24px;
-    text-align: center;
-  }
-}
 
 .visitors {
 
@@ -61,21 +60,6 @@
 
   &:matches(:global(.is_act)) {
     background: color(var(--c_like) lightness(40%));
-  }
-}
-
-.delete {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  fill: #fff;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    fill: var(--c_main);
   }
 }
 

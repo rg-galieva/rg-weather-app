@@ -1,0 +1,76 @@
+@import "vars.gcss";
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: inset 0 0 0 1px var(--c_sub);
+  color: var(--c_sub);
+  text-transform: uppercase;
+  line-height: calc(50rem/var(--f_size));
+  padding: 0 calc(30rem/var(--f_size));
+  letter-spacing: 0.2rem;
+  overflow: hidden;
+
+  & > span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.4s;
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px var(--c_txt);
+    color: var(--c_txt);
+  }
+}
+
+.btn:hover span,
+.btn:focus span {
+  transform: translateY(-100%);
+  text-shadow: 0 0 1px var(--c_txt);
+}
+
+
+.btn_xs {
+  line-height: calc(30rem/var(--f_size));
+  padding: 0 calc(15rem/var(--f_size));
+  letter-spacing: normal;
+}
+
+.btn_i {
+  display: inline-block;
+  width: calc(30rem/var(--f_size));
+  height: calc(30rem/var(--f_size));
+  box-shadow: inset 0 0 0 1px var(--c_sub);
+  overflow: hidden;
+  transition: .3s;
+
+  & svg {
+    width: calc(12rem/var(--f_size));
+    height: calc(12rem/var(--f_size));
+    fill: var(--c_sub);
+    transition: .3s;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px var(--c_txt);
+
+    & svg {
+      fill: var(--c_txt);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.btn_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; height: 100%;
+}

@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import s from './_styles.css'
 import {connect} from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { fetchWeather } from '../../actions'
+import {bindActionCreators} from 'redux'
+import {fetchWeather} from '../../actions'
 
 class SearchBarContainer extends Component {
     constructor(props) {
@@ -20,14 +20,16 @@ class SearchBarContainer extends Component {
     onFormSubmit = (ev) => {
         ev.preventDefault();
         this.props.fetchWeather(this.state.term);
-        this.setState({ term: '' })
+        this.setState({term: ''})
     }
 
     render() {
         return (
-            <form className={s.search_form} onSubmit={this.onFormSubmit}>
-                <input type="search" value={this.state.term} placeholder="Get a forecast" onChange={this.onInputChange} className="input"/>
-                <button type="submit">Search</button>
+            <form className={s.search_form} onSubmit={this.onFormSubmit} autoComplete="off">
+               <div className="input_wrap">
+                    <input type="search" value={this.state.term} onChange={this.onInputChange} id="input_txt"/>
+                    <label htmlFor="input_txt"><span>Get a forecast</span></label>
+                </div>
             </form>
         )
     }

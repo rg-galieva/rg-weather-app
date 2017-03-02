@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react'
 import s from './_styles.css'
 
-const i_cancel = require('./cancel-1.svg');
 const i_stats = require('./stats.svg');
 
 function City(props) {
@@ -19,8 +18,7 @@ function City(props) {
             </div>
 
             <div className={s.icons}>
-                <div dangerouslySetInnerHTML={{__html: i_cancel}} className={s.icon}></div>
-                <div dangerouslySetInnerHTML={{__html: i_stats}} className={s.icon}></div>
+                {/*<div dangerouslySetInnerHTML={{__html: i_stats}} className={s.icon}></div>*/}
             </div>
         </section>
     );

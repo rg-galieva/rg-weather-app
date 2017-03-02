@@ -1,0 +1,34 @@
+@import "../../assets/styles/vars.gcss";
+
+.city_list {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.city {
+  position: relative;
+  padding: 1rem;
+  width: 25%;
+}
+
+.delete {
+  position: absolute;
+  top: calc(24rem/var(--f_size));
+  right: calc(24rem/var(--f_size));
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  & svg {
+    width: calc(20rem/var(--f_size));
+    height:calc(20rem/var(--f_size));
+    fill: var(--c_txt);
+    transition: all 0.2s ease-in;
+  }
+
+  &:hover svg {
+    fill: var(--c_emph);
+  }
+}
