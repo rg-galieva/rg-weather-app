@@ -7,26 +7,19 @@ function City(props) {
     let {city, country, region, wind, humidity, sunrise, sunset, date, temp, text} = props.weather;
 
     return (
-        <section className={s.city_wrap}>
-            <div className={s.city}>
-                <h1>{city}</h1>
+        <div className={s.city}>
+            <h1>{city}</h1>
 
-                <div className={s.desc}>
-                    <p>{country}</p>
-                    <p>{region}</p>
-                </div>
+            <div className={s.desc}>
+                <p>{country}</p>
+                <p>{region}</p>
             </div>
-
-            <div className={s.icons}>
-                {/*<div dangerouslySetInnerHTML={{__html: i_stats}} className={s.icon}></div>*/}
-            </div>
-        </section>
+        </div>
     );
 }
 
 City.propTypes = {
     weather: PropTypes.shape({
-        id: PropTypes.number.isRequired,
         city: PropTypes.string,
         country: PropTypes.string,
         region: PropTypes.string,
@@ -37,7 +30,8 @@ City.propTypes = {
         date: PropTypes.date,
         temp: PropTypes.string,
         text: PropTypes.string
-    })
+    }),
+    id: PropTypes.number.isRequired
 };
 
 export default City;

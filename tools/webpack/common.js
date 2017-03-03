@@ -2,7 +2,6 @@ const {resolve} = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const cssSettings = require('../../src/frontend/assets/styles/vars.js');
 
 module.exports = function () {
     return {
@@ -11,6 +10,7 @@ module.exports = function () {
         entry: {
             vendor: ['react', 'react-dom'],
             app: './frontend/app.js'
+
         },
 
         module: {
@@ -43,9 +43,7 @@ module.exports = function () {
                                             return [
                                                 require('postcss-import'),
                                                 require('postcss-mixins'),
-                                                require('postcss-cssnext')({
-                                                    features: cssSettings
-                                                })
+                                                require('postcss-cssnext')
                                             ]
                                         }
                                     }
@@ -70,9 +68,7 @@ module.exports = function () {
                                         return [
                                             require('postcss-import'),
                                             require('postcss-mixins'),
-                                            require('postcss-cssnext')({
-                                                features: cssSettings
-                                            })
+                                            require('postcss-cssnext')
                                         ]
                                     }
                                 }
