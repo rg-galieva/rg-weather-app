@@ -18,7 +18,7 @@ class CityContainer extends Component {
         c.date = w.item.pubDate;
         c.temp = w.item.condition.temp;
         c.text = w.item.condition.text;
-
+        c.code = w.item.condition.code;
         return c;
     };
 

@@ -82,8 +82,14 @@ module.exports = function () {
                     use: 'file-loader?name=img/[name]_[hash:5].[ext]'
                 },
                 {
-                    test: /\.svg$/,
+                    test: /\.svg/,
+                    exclude: resolve(__dirname, './../../src/frontend/assets/weather_icons/'),
                     use: 'raw-loader'
+                },
+                {
+                    test: /\.svg$/,
+                    include: resolve(__dirname, './../../src/frontend/assets/weather_icons/'),
+                    use: 'file-loader'
                 },
                 {
                     test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,

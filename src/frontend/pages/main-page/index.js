@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router'
 import Menu from '../../components/menu'
 require ('../../assets/styles/common.gcss')
+require ('../../assets/weather_icons/weather-icons.gcss');
 import s from './_styles.css'
 
 import SearchBarContainer from '../../containers/search-bar'

@@ -1,15 +1,19 @@
 import React, {PropTypes} from 'react'
 import s from './_styles.css'
-
 const i_stats = require('./stats.svg');
 
 function City(props) {
-    let {city, country, region, wind, humidity, sunrise, sunset, date, temp, text} = props.weather;
+    let {city, country, region, wind, humidity, sunrise, sunset, date, temp, text, code} = props.weather;
 
     return (
         <div className={s.city}>
             <h1>{city}</h1>
 
+            <div className={s.temp_now}>
+                <span>{temp}</span>
+                <i className={['wi', `wi-yahoo-${code}`].join(' ')}></i>
+                {/*<span>{text}</span>*/}
+            </div>
             <div className={s.desc}>
                 <p>{country}</p>
                 <p>{region}</p>
@@ -29,7 +33,8 @@ City.propTypes = {
         sunset: PropTypes.string,
         date: PropTypes.date,
         temp: PropTypes.string,
-        text: PropTypes.string
+        text: PropTypes.string,
+        code: PropTypes.string
     }),
     id: PropTypes.number.isRequired
 };

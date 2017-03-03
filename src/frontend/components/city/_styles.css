@@ -60,3 +60,9 @@
     }
   }
 }
+
+.temp_now {
+  position: absolute;
+  right: 1rem; top: 1rem;
+  color: var(--c_txt);
+}
