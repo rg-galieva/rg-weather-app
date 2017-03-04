@@ -1,9 +1,9 @@
 Forecast for the next 7 days. Any city around the world. Build with Yahoo Weather.
 Flat design for city cards with background picture from Google Places.
-Check live preview: [rg-weather-app](http://rg-weather-app.surge.sh/)
+Check live preview: [rg-weather-app](http://rg-weather-app.netlify.com/)
 
  
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "RG WEATHER APP")
+![alt text](https://cdn.rg-galieva.com/img/rg-weather-app.jpg "RG WEATHER APP")
 
 ### Tech Stack
 

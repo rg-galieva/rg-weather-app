@@ -27,6 +27,12 @@ module.exports = function (env) {
                 verbose: true,
                 dry: false
             }),
+            new CopyWebpackPlugin([
+                {
+                    from: resolve(__dirname, './../../_redirects'),
+                    to: './'
+                }
+            ]),
             new webpack.LoaderOptionsPlugin({
                 minimize: true,
                 debug: false
