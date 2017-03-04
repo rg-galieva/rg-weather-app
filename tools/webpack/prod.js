@@ -27,12 +27,6 @@ module.exports = function (env) {
                 verbose: true,
                 dry: false
             }),
-            new CopyWebpackPlugin([
-                {
-                    from: resolve(__dirname, './../../vendor'),
-                    to: 'vendor'
-                }
-            ]),
             new webpack.LoaderOptionsPlugin({
                 minimize: true,
                 debug: false

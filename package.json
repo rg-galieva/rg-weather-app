@@ -13,7 +13,7 @@
     "build:dev": "webpack --env=dev --progress --profile --colors",
     "build:prod": "webpack --env=prod --progress --profile --colors",
     "deploy:surge": "yarn build:prod && cd dist && mv index.html 200.html && surge ./",
-    "deploy:netlify": "yarn build:prod && cd dist && mv index.html 200.html && netlify deploy"
+    "deploy:netlify": "yarn build:prod && cd dist && netlify deploy"
   },
   "keywords": [
     "webpack v2",
