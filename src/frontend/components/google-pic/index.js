@@ -17,7 +17,7 @@ class GooglePic extends Component {
                 return picRef;
             })
             .then((picRef) => {
-                const API_PIC_QUERY = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${picRef}&key=${API_KEY}`;
+                const API_PIC_QUERY = `https://maps.googleapis.com/maps/api/place/photo?maxheight=800&maxwidth=400&photoreference=${picRef}&key=${API_KEY}`;
                 this.refs.google_img.style.backgroundImage = `url(${API_PIC_QUERY})`;
             })
             .catch(function (error) {

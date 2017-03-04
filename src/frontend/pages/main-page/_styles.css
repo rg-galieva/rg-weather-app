@@ -16,7 +16,7 @@
 
   & > header {
     position: relative;
-    margin-bottom: calc(50rem / var(--f_size));
+    margin-bottom: calc(10rem / var(--f_size));
   }
 
   & > main {

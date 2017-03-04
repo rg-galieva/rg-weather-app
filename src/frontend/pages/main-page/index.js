@@ -1,14 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router'
 import Menu from '../../components/menu'
-require ('../../assets/styles/common.gcss')
-require ('../../assets/weather_icons/weather-icons.gcss');
-import s from './_styles.css'
-
 import SearchBarContainer from '../../containers/search-bar'
-import WeatherList from '../../containers/weather_list'
-
-
+import CityList from '../../containers/city-list-container'
+require ('../../assets/styles/common.gcss')
+require ('../../assets/weather_icons/weather-icons.gcss')
+import s from './_styles.css'
 
 function MainPage (props) {
     return (
@@ -20,7 +17,7 @@ function MainPage (props) {
 
             <main>
                 <SearchBarContainer/>
-                <WeatherList/>
+                <CityList/>
                 {props.children}
             </main>
 
@@ -36,4 +33,3 @@ function MainPage (props) {
 }
 
 export default MainPage
-

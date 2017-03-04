@@ -10,11 +10,8 @@ class CityContainer extends Component {
         let c = {};
         c.city = w.location.city;
         c.country = w.location.country;
-        c.region = w.location.region;
-        c.wind = w.wind.speed;
-        c.humidity = w.atmosphere.humidity;
-        c.sunrise = w.astronomy.sunrise;
-        c.sunset = w.astronomy.sunset;
+        c.moonrise = w.astronomy.sunrise;
+        c.moonset = w.astronomy.sunset;
         c.date = w.item.pubDate;
         c.temp = w.item.condition.temp;
         c.text = w.item.condition.text;
@@ -35,7 +32,7 @@ class CityContainer extends Component {
         return (
             <section className={s.city_wrap}>
                 <GooglePic coords={coords}/>
-                <City id={id} weather={this.parseData(weather)}/>
+                <City id={id} weather={this.parseData(weather)} forecast={weather.item.forecast}/>
                 <Chart data={this.getTempList(weather)} color="#f7f7f7"/>
             </section>
         );

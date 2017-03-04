@@ -1,0 +1,37 @@
+@import "../../assets/styles/vars.gcss";
+
+.city_list {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.city {
+  position: relative;
+  padding: 1rem;
+  width: 25%;
+}
+
+@media (max-width: 1100px) {
+  .city {
+    width: calc(100%/3);
+  }
+}
+
+@media (max-width: 700px) {
+  .city {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .city_list {
+    flex-flow: column;
+  }
+
+  .city {
+    width: 100%;
+  }
+}

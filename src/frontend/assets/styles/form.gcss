@@ -8,9 +8,13 @@
 .input_wrap input {
   width: 100%;
   border: none;
-  line-height: calc(50rem / var(--f_size));
+  height: calc(50rem / var(--f_size));
+  line-height: calc(20rem / var(--f_size));
+  font-size: calc(14rem / var(--f_size));
   color: var(--c_sub);
   background: transparent;
+  background: none;
+  -webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
 .input_wrap label {

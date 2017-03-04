@@ -3,4 +3,8 @@
 .search_form {
   width: 60%;
   margin: 0 auto 2rem;
+
+  & :global(label) {
+    font-size: 1rem;
+  }
 }
