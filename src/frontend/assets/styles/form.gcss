@@ -15,6 +15,7 @@
   background: transparent;
   background: none;
   -webkit-appearance: none; /* for box shadows to show on iOS */
+  text-align: center;
 }
 
 .input_wrap label {
@@ -26,12 +27,13 @@
   top: 0;
   pointer-events: none;
   text-transform: uppercase;
+  text-align: center;
 
   & span {
     position: relative;
     display: block;
-    transform-origin: 0 0;
     transition: transform 0.3s, color 0.3s;
+    text-align: center;
   }
 
   &::after {

@@ -23,12 +23,19 @@ class SearchBarContainer extends Component {
         this.setState({term: ''})
     }
 
+    componentWillMount() {
+        this.props.fetchWeather('Saint Petersburg');
+        this.props.fetchWeather('New Orleans');
+        this.props.fetchWeather('Rome');
+        this.props.fetchWeather('New York');
+    }
+
     render() {
         return (
             <form className={s.search_form} onSubmit={this.onFormSubmit} autoComplete="off">
                <div className="input_wrap">
                     <input type="search" value={this.state.term} onChange={this.onInputChange} id="input_txt"/>
-                    <label htmlFor="input_txt"><span>Get a forecast</span></label>
+                    <label htmlFor="input_txt"><span>Check results for your favorite city</span></label>
                 </div>
             </form>
         )

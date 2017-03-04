@@ -17,8 +17,8 @@ function City(props) {
             <div className={s.w_list_item} key={day.day}>
                 <span className={s.w_list_item_day}>{day.day}</span>
                 <i className={['wi', `wi-yahoo-${day.code}`].join(' ')}></i>
-                <span className={s.w_list_item_temp}>{day.high}</span>
-                <span className={s.w_list_item_temp}>{day.low}</span>
+                <span className={s.w_list_item_temp}>{day.high}°</span>
+                <span className={s.w_list_item_temp}>{day.low}°</span>
             </div>
         )
     });
@@ -58,6 +58,8 @@ function City(props) {
             <div className={s.w_list}>
                 {forecast}
             </div>
+
+            <a href="https://www.yahoo.com/?ilc=401" target="_blank" className={s.yahoo_weather}><img src="https://poweredby.yahoo.com/white.png" width="134" height="29"/></a>
         </div>
     );
 }

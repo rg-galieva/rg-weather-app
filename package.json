@@ -1,5 +1,5 @@
 {
-  "name": "rg-starter-react",
+  "name": "rg-weather-app",
   "version": "1.0.0",
   "main": "src/frontend/app.js",
   "author": "Regina Galieva",
@@ -12,12 +12,16 @@
     "dev": "webpack-dev-server --env=dev --hot --inline",
     "build:dev": "webpack --env=dev --progress --profile --colors",
     "build:prod": "webpack --env=prod --progress --profile --colors",
-    "deploy": "yarn build:prod && cd dist && mv index.html 200.html && surge . --domain rg-weather-app.surge.sh"
+    "deploy:surge": "yarn build:prod && cd dist && mv index.html 200.html && surge ./",
+    "deploy:netlify": "yarn build:prod && cd dist && mv index.html 200.html && netlify deploy"
   },
   "keywords": [
     "webpack v2",
     "react",
-    "redux"
+    "redux",
+    "axios",
+    "yahoo weather API",
+    "google places API"
   ],
   "devDependencies": {
     "babel-core": "^6.22.1",

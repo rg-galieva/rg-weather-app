@@ -4,3 +4,5 @@ node_modules
 npm-debug.log
 keys.js
 .DS_Store
+CNAME
+.netlify

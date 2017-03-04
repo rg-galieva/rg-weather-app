@@ -23,9 +23,8 @@ function MainPage (props) {
 
             <footer>
                 <nav>
-                    <a href="">Links</a>
-                    <a href="">Links</a>
-                    <a href="">Links</a>
+                    <a href="https://developer.yahoo.com/weather/" target="_blank">Yahoo Weather API</a>
+                    <a href="https://developers.google.com/places/web-service/photos" target="_blank">Google Places API</a>
                 </nav>
             </footer>
         </div>
