@@ -1,12 +1,12 @@
 import React, {PropTypes, Component} from 'react'
 import {findDOMNode, render} from 'react-dom'
 import axios from 'axios'
-import {API_KEY} from '../../keys'
+import {API_KEY_GOOGLE} from '../../keys'
 
 class GooglePic extends Component {
     setApiPlaceQuery = () => {
         let {lat, lng} = this.props.coords;
-        return `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=100&type=city_hall,museum&key=${API_KEY}`
+        return `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=100&type=city_hall,museum&key=${API_KEY_GOOGLE}`
     };
 
     getPicRef = () => {
@@ -17,7 +17,7 @@ class GooglePic extends Component {
                 return picRef;
             })
             .then((picRef) => {
-                const API_PIC_QUERY = `https://maps.googleapis.com/maps/api/place/photo?maxheight=800&maxwidth=400&photoreference=${picRef}&key=${API_KEY}`;
+                const API_PIC_QUERY = `https://maps.googleapis.com/maps/api/place/photo?maxheight=800&maxwidth=400&photoreference=${picRef}&key=${API_KEY_GOOGLE}`;
                 this.refs.google_img.style.backgroundImage = `url(${API_PIC_QUERY})`;
             })
             .catch(function (error) {

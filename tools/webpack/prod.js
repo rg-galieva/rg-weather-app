@@ -31,6 +31,10 @@ module.exports = function (env) {
                 {
                     from: resolve(__dirname, './../../_redirects'),
                     to: './'
+                },
+                {
+                    from: resolve(__dirname, './../../CNAME'),
+                    to: './'
                 }
             ]),
             new webpack.LoaderOptionsPlugin({

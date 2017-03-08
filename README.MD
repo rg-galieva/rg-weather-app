@@ -1,6 +1,6 @@
 Forecast for the next 7 days. Any city around the world. Build with Yahoo Weather.
-Flat design for city cards with background picture from Google Places.
-Check live preview: [rg-weather-app](http://rg-weather-app.netlify.com/)
+Flat design for city cards with background picture from Google Places or Flickr.
+Check out live preview: [rg-weather-app](http://rg-weather-app.netlify.com/)
 
  
 ![alt text](https://cdn.rg-galieva.com/img/rg-weather-app.jpg "RG WEATHER APP")
@@ -33,5 +33,7 @@ $ yarn deploy
 ```
 
 #### API LINKS
-[Yahoo Weather API](https://developer.yahoo.com/weather/ )
-[Google Places API](https://developers.google.com/places/web-service/photos)
+- [Yahoo Weather API](https://developer.yahoo.com/weather/ )
+- [Google Places API](https://developers.google.com/places/web-service/photos)
+- [Flickr Photo Source URLs](https://www.flickr.com/services/api/misc.urls.html)
+- [Flickr Photos Search](https://www.flickr.com/services/api/explore/flickr.photos.search)

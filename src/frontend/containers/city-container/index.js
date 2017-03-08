@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react'
 import City from '../../components/city'
-import GooglePic from '../../components/google-pic'
-import Chart from '../../components/chart'
+import FlickrPic from '../../components/flickr-pic'
+// import GooglePic from '../../components/google-pic'
 import s from './_styles.css'
 
 class CityContainer extends Component {
@@ -31,16 +31,16 @@ class CityContainer extends Component {
 
         return (
             <section className={s.city_wrap}>
-                <GooglePic coords={coords}/>
+                {/*<GooglePic coords={coords}/>*/}
+                <FlickrPic title={weather.location.city} country={weather.location.country}/>
                 <City id={id} weather={this.parseData(weather)} forecast={weather.item.forecast}/>
-                <Chart data={this.getTempList(weather)} color="#f7f7f7"/>
             </section>
         );
     }
 
-    // static propTypes = {
-    //     : PropTypes..isRequired
-    // };
+    static propTypes = {
+       weather : PropTypes.object.isRequired
+    };
 
 }
 

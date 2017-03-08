@@ -25,6 +25,7 @@ function MainPage (props) {
                 <nav>
                     <a href="https://developer.yahoo.com/weather/" target="_blank">Yahoo Weather API</a>
                     <a href="https://developers.google.com/places/web-service/photos" target="_blank">Google Places API</a>
+                    <a href="https://www.flickr.com/services/api/explore/flickr.photos.search" target="_blank">Flickr Photos Search</a>
                 </nav>
             </footer>
         </div>

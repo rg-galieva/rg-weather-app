@@ -1,1 +1,2 @@
-export const API_KEY='AIzaSyB9wSz78eboSDWcjex_TnGmjiyg9NXNHmY';
+export const API_KEY_GOOGLE='AIzaSyB9wSz78eboSDWcjex_TnGmjiyg9NXNHmY';
+export const API_KEY_FLICKR='4f40f86ea4793436e3940ed92119157b';

@@ -11,7 +11,8 @@
   font-size: calc(14rem/var(--f_size));
   background-repeat: no-repeat;
 
-  & :global(.google_img) {
+  & :global(.google_img),
+  & :global(.flickr_img){
     position: absolute;
     top: 0; left: 0;
     height: 100%;
