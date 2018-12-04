@@ -22,6 +22,12 @@ module.exports = function (env) {
                     NODE_ENV: JSON.stringify("production")
                 }
             }),
+					new webpack.DefinePlugin({
+						"process.env.API_KEY_GOOGLE": JSON.stringify(process.env.API_KEY_GOOGLE)
+					}),
+					new webpack.DefinePlugin({
+						"process.env.API_KEY_FLICKR": JSON.stringify(process.env.API_KEY_FLICKR)
+					}),
             new CleanWebpackPlugin(['dist', 'build'], {
                 root: process.cwd(),
                 verbose: true,

@@ -1,7 +1,8 @@
 import React, {PropTypes, Component} from 'react'
-import {findDOMNode, render} from 'react-dom'
 import axios from 'axios'
-import {API_KEY_GOOGLE} from '../../keys'
+
+
+const API_KEY_GOOGLE = process.env.API_KEY_GOOGLE;
 
 class GooglePic extends Component {
     setApiPlaceQuery = () => {
@@ -18,7 +19,7 @@ class GooglePic extends Component {
             })
             .then((picRef) => {
                 const API_PIC_QUERY = `https://maps.googleapis.com/maps/api/place/photo?maxheight=800&maxwidth=400&photoreference=${picRef}&key=${API_KEY_GOOGLE}`;
-                this.refs.google_img.style.backgroundImage = `url(${API_PIC_QUERY})`;
+                this.refs.google_img.style.backgroundImage = `url(${API_KEY_GOOGLE})`;
             })
             .catch(function (error) {
                 console.log(error);

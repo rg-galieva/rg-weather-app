@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react'
-import {findDOMNode, render} from 'react-dom'
 import axios from 'axios'
-import {API_KEY_FLICKR} from '../../keys'
+
+const API_KEY_FLICKR = process.env.API_KEY_FLICKR;
 
 class FlickrPic extends Component {
     setApiPlaceQuery = () => {

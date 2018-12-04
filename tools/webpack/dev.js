@@ -1,6 +1,7 @@
 const {resolve} = require('path');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./common.js');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = function (env) {
     return webpackMerge(commonConfig(), {
@@ -21,6 +22,13 @@ module.exports = function (env) {
                 "Access-Control-Allow-Headers": "Content-Type, Authorization, x-id, Content-Length, X-Requested-With",
                 "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"
             }
-        }
+        },
+			plugins: [
+				new Dotenv({
+					path: './.env',
+					safe: true,
+					systemvars: true
+				})
+			]
     })
 }
